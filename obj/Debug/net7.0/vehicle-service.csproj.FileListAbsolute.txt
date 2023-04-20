@@ -44,3 +44,10 @@
 /Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-service/obj/Debug/net7.0/vehicle-service.pdb
 /Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-service/obj/Debug/net7.0/vehicle-service.genruntimeconfig.cache
 /Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-service/obj/Debug/net7.0/ref/vehicle-service.dll
+/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-service/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-service/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-service/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-service/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
+/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-service/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-service/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-service/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll
