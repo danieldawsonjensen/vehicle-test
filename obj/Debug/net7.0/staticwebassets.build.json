@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "DW+3ixBG1dc9P0ckanlqs7AVPPdwMaXBtpeU7dF4jYw=",
+  "Source": "vehicle-service",
+  "BasePath": "_content/vehicle-service",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

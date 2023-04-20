@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using System.Xml.Linq;
 using System.Text;
 using System.Threading.Channels;
@@ -25,7 +24,8 @@ public class VehicleController : ControllerBase
             VehicleId = 1,
             VehicleBrand = "Mercedes",
             VehicleRegNr = "VJ30535",
-            MilesDriven = 100
+            MilesDriven = 100,
+            ServiceHistory = new List<Service>()
         },
         new Vehicle
         {
