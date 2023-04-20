@@ -1202,24 +1202,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/daddel/.nuget/packages/": {}
+    "C:\\Users\\Madsk\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-service/vehicle-service.csproj",
+      "projectUniqueName": "C:\\Users\\Madsk\\OneDrive\\Skrivebord\\Skole\\4. semester\\IT arkitektur og infrastruktur\\test\\vehicle-service.csproj",
       "projectName": "vehicle-service",
-      "projectPath": "/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-service/vehicle-service.csproj",
-      "packagesPath": "/Users/daddel/.nuget/packages/",
-      "outputPath": "/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-service/obj/",
+      "projectPath": "C:\\Users\\Madsk\\OneDrive\\Skrivebord\\Skole\\4. semester\\IT arkitektur og infrastruktur\\test\\vehicle-service.csproj",
+      "packagesPath": "C:\\Users\\Madsk\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Madsk\\OneDrive\\Skrivebord\\Skole\\4. semester\\IT arkitektur og infrastruktur\\test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/daddel/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Madsk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1278,7 +1280,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }
