@@ -100,7 +100,7 @@ public class VehicleController : ControllerBase
         Vehicle vehicle = new Vehicle(); //initialiserer nyt vehicle objekt
         vehicle = Vehicles.FirstOrDefault(a => a.VehicleId == id)!; //sætter vehicle til matchende id
 
-        _logger.LogInformation("ønsket vehicle objejt sat til vehicle objekt med id");
+        _logger.LogInformation("ønsket vehicle object sat til vehicle objekt med id");
 
 
         return Ok(vehicle);
