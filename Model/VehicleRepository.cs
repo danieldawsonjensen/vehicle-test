@@ -19,7 +19,7 @@ namespace Model
 
         public async Task<Vehicle> GetVehicleById(int id)
         {
-            var filter = Builders<Vehicle>.Filter.Eq("id", id);
+            var filter = Builders<Vehicle>.Filter.Eq("VehicleId", id);
             return await _vehicles.Find(filter).FirstOrDefaultAsync();
         }
 
@@ -33,11 +33,25 @@ namespace Model
             _vehicles.InsertOne(vehicle);
         }
 
+        public async Task<bool> AddService(Service service, int id)
+        {
+            var filter = Builders<Vehicle>.Filter.Eq(x => x.VehicleId, id);
+            var update = Builders<Vehicle>.Update.Push(x => x.ServiceHistory, service);
+
+            var result = await _vehicles.UpdateOneAsync(filter, update);
+
+            return result.ModifiedCount > 0;
+        }
+
+        /*
         public async void AddService(Service service, int id)
         {
             Vehicle serviceVehicle = await GetVehicleById(id);
 
             serviceVehicle.ServiceHistory.Add(service);
-        }
+
+            _vehicles.InsertOne(serviceVehicle);
+
+        }*/
     }
 }

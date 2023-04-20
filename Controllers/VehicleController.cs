@@ -89,11 +89,11 @@ public class VehicleController : ControllerBase
 
     [Authorize]
     [HttpGet("getallvehicles"), DisableRequestSizeLimit]
-    public async Task<IActionResult> GetAllVehicles() //skal måske laves om til at returne en list (public list<vehicle> GetAllVehicles()
+    public IActionResult GetAllVehicles() //skal måske laves om til at returne en list (public list<vehicle> GetAllVehicles()
     {
         _logger.LogInformation("getAllVehicles funktion ramt");
 
-        var vehicles = _vehicleRepository.GetAllVehicles();
+        var vehicles = _vehicleRepository.GetAllVehicles().Result;
 
         /*
         if (Vehicles == null)
@@ -102,7 +102,7 @@ public class VehicleController : ControllerBase
         }
         */
 
-        return Ok(vehicles);
+        return Ok(new OkObjectResult(vehicles));
     }
 
 
@@ -112,7 +112,7 @@ public class VehicleController : ControllerBase
     {
         _logger.LogInformation("getVehicle funktion ramt");
 
-        var vehicle = _vehicleRepository.GetVehicleById(id);
+        var vehicle = await _vehicleRepository.GetVehicleById(id);
 
 
 
@@ -128,6 +128,32 @@ public class VehicleController : ControllerBase
     }
 
 
+    [Authorize]
+    [HttpPost("servicehistory/{id}")]
+    public async Task<IActionResult> AddService(int id, [FromBody] Service service)
+    {
+        _logger.LogInformation("AddService method called");
+
+        if (service == null)
+        {
+            return BadRequest("Service data is null.");
+        }
+
+        if (!ModelState.IsValid)
+        {
+            return BadRequest("Invalid model object.");
+        }
+
+        await _vehicleRepository.AddService(service, id);
+
+        _logger.LogInformation("Service added to the vehicle.");
+
+        return Ok();
+    }
+
+
+
+    /*
     [Authorize]
     [HttpPost("servicehistory/{id}"), DisableRequestSizeLimit]
     public async Task<IActionResult> AddService([FromBody] Service? service, int id)
@@ -165,6 +191,7 @@ public class VehicleController : ControllerBase
         return Ok(serviceVehicle);
 
     }
+    */
 
 
 }

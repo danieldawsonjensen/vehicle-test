@@ -1,14 +1,17 @@
 ﻿<Properties StartupConfiguration="{DE6F9150-3A90-4790-80B0-C018701A6BB7}|https">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/TestController.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.vehicle-service PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/VehicleController.cs">
     <Files>
-      <File FileName="Model/Vehicle.cs" />
+      <File FileName="Model/Vehicle.cs" Line="13" Column="19" />
       <File FileName="Model/Service.cs" />
       <File FileName="Model/Image.cs" />
-      <File FileName="Controllers/VehicleController.cs" />
-      <File FileName="Program.cs" />
-      <File FileName="Controllers/AuthController.cs" />
-      <File FileName="Model/LoginModel.cs" />
-      <File FileName="Controllers/TestController.cs" Line="22" Column="6" />
+      <File FileName="Controllers/VehicleController.cs" Line="136" Column="1" />
+      <File FileName="Program.cs" Line="27" Column="1" />
+      <File FileName="Model/VehicleRepository.cs" Line="38" Column="29" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,7 +19,7 @@
           <Node name="vehicle-service" expanded="True">
             <Node name="vehicle-service" expanded="True">
               <Node name="Controllers" expanded="True">
-                <Node name="TestController.cs" selected="True" />
+                <Node name="VehicleController.cs" selected="True" />
               </Node>
               <Node name="Model" expanded="True" />
             </Node>
@@ -25,11 +28,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.vehicle-service PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
 </Properties>
