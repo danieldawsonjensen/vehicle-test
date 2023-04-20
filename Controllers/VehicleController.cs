@@ -10,6 +10,11 @@ using System.Text;
 using System.Threading.Channels;
 using System.Text.Json;
 using System.Net;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace Controllers;
 
@@ -47,6 +52,7 @@ public class VehicleController : ControllerBase
     }
 
 
+    [Authorize]
     [HttpPost("addvehicle"), DisableRequestSizeLimit]
     public async Task<IActionResult> Post([FromBody] Vehicle? vehicle)
     {
@@ -78,6 +84,7 @@ public class VehicleController : ControllerBase
     }
 
 
+    [Authorize]
     [HttpGet("getallvehicles"), DisableRequestSizeLimit]
     public async Task<IActionResult> GetAllVehicles() //skal måske laves om til at returne en list (public list<vehicle> GetAllVehicles()
     {
@@ -93,6 +100,7 @@ public class VehicleController : ControllerBase
     }
 
 
+    [Authorize]
     [HttpGet("getvehicle/{id}"), DisableRequestSizeLimit]
     public async Task<IActionResult> GetVehicle(int id) //skal måske laves om til at returne en list (public list<vehicle> GetAllVehicles()
     {
@@ -107,7 +115,8 @@ public class VehicleController : ControllerBase
         return Ok(vehicle);
     }
 
-    
+
+    [Authorize]
     [HttpPost("servicehistory/{id}"), DisableRequestSizeLimit]
     public async Task<IActionResult> Post([FromBody] Service? serviceHistory, int id)
     {
