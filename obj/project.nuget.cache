@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nm9vxE0kX1qpPo2a368UYyhMrlF6S0WIIY+FWdnWsLLXleB6qI81DzUbJS/PU3yflTMg1uYdhJdsc3Zv3ah2Ag==",
+  "dgSpecHash": "gxQOl/6HhXTsVURgXMMo4j6dbcpEoiMtMMpko6H93tQal20t0tSzlgWA/Mj9ce0g4O8i2qcbhnJZ2E3DWkbVLQ==",
   "success": true,
-  "projectFilePath": "/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-service/vehicle-service.csproj",
+  "projectFilePath": "/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-test/vehicle-service.csproj",
   "expectedPackageFiles": [
     "/Users/daddel/.nuget/packages/awssdk.core/3.7.100.14/awssdk.core.3.7.100.14.nupkg.sha512",
     "/Users/daddel/.nuget/packages/awssdk.securitytoken/3.7.100.14/awssdk.securitytoken.3.7.100.14.nupkg.sha512",

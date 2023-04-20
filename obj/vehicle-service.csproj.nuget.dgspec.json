@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-service/vehicle-service.csproj": {}
+    "/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-test/vehicle-service.csproj": {}
   },
   "projects": {
-    "/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-service/vehicle-service.csproj": {
+    "/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-test/vehicle-service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-service/vehicle-service.csproj",
+        "projectUniqueName": "/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-test/vehicle-service.csproj",
         "projectName": "vehicle-service",
-        "projectPath": "/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-service/vehicle-service.csproj",
+        "projectPath": "/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-test/vehicle-service.csproj",
         "packagesPath": "/Users/daddel/.nuget/packages/",
-        "outputPath": "/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-service/obj/",
+        "outputPath": "/Users/daddel/Documents/Skole/4sem/infra/fleet-management/vehicle-test/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/daddel/.nuget/NuGet/NuGet.Config"
