@@ -1,3 +1,33 @@
 ﻿<Properties StartupConfiguration="{DE6F9150-3A90-4790-80B0-C018701A6BB7}|https">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.vehicle-service PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/TestController.cs">
+    <Files>
+      <File FileName="Model/Vehicle.cs" Line="17" Column="6" />
+      <File FileName="Model/Service.cs" Line="14" Column="1" />
+      <File FileName="Model/Image.cs" Line="2" Column="7" />
+      <File FileName="Controllers/VehicleController.cs" Line="20" Column="43" />
+      <File FileName="Program.cs" Line="45" Column="25" />
+      <File FileName="Controllers/AuthController.cs" Line="58" Column="10" />
+      <File FileName="Model/LoginModel.cs" Line="7" Column="2" />
+      <File FileName="Controllers/TestController.cs" Line="22" Column="6" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="vehicle-service" expanded="True">
+            <Node name="vehicle-service" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Model" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
 </Properties>
