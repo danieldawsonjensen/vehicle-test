@@ -24,8 +24,7 @@ public class VehicleController : ControllerBase
             VehicleId = 1,
             VehicleBrand = "Mercedes",
             VehicleRegNr = "VJ30535",
-            MilesDriven = 100,
-            ServiceHistory = new List<Service>()
+            MilesDriven = 100
         },
         new Vehicle
         {
