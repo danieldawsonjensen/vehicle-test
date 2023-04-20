@@ -23,6 +23,7 @@ public class VehicleController : ControllerBase
         {
             VehicleId = 1,
             VehicleBrand = "Mercedes",
+            VehicleModel = "Mercedes X230",
             VehicleRegNr = "VJ30535",
             MilesDriven = 100
         },
@@ -30,6 +31,7 @@ public class VehicleController : ControllerBase
         {
             VehicleId = 2,
             VehicleBrand = "Audi",
+            VehicleModel = "Audi R8",
             VehicleRegNr = "BK21211",
             MilesDriven = 35000
         }

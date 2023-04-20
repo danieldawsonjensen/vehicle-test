@@ -6,6 +6,7 @@ public class Vehicle
 {
     public int VehicleId { get; set; }
     public string VehicleBrand { get; set; }
+    public string VehicleModel { get; set; }
     public string VehicleRegNr { get; set; }
     public int MilesDriven { get; set; }
 
