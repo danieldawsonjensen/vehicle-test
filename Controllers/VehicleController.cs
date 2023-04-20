@@ -44,11 +44,13 @@ public class VehicleController : ControllerBase
 
     private readonly ILogger<VehicleController> _logger;
     private readonly IConfiguration _config;
+    private VehicleRepository _vehicleRepository;
 
-    public VehicleController(ILogger<VehicleController> logger, IConfiguration config)
+    public VehicleController(ILogger<VehicleController> logger, IConfiguration config, VehicleRepository vehicleRepository)
     {
         _logger = logger;
         _config = config;
+        _vehicleRepository = vehicleRepository;
     }
 
 
@@ -62,6 +64,7 @@ public class VehicleController : ControllerBase
         {
             VehicleId = vehicle.VehicleId,
             VehicleBrand = vehicle.VehicleBrand,
+            VehicleModel = vehicle.VehicleModel,
             VehicleRegNr = vehicle.VehicleRegNr,
             MilesDriven = vehicle.MilesDriven
         };
@@ -74,7 +77,7 @@ public class VehicleController : ControllerBase
         }
         else
         {
-            Vehicles.Add(newVehicle);
+            _vehicleRepository.AddVehicle(newVehicle);
         }
         _logger.LogInformation("nyt vehicle objekt added til Vehicles list");
 
@@ -90,13 +93,16 @@ public class VehicleController : ControllerBase
     {
         _logger.LogInformation("getAllVehicles funktion ramt");
 
+        var vehicles = _vehicleRepository.GetAllVehicles();
+
+        /*
         if (Vehicles == null)
         {
             return BadRequest("Vehicles list is empty");
         }
+        */
 
-
-        return Ok(Vehicles.OrderBy(a => a.VehicleId));
+        return Ok(vehicles);
     }
 
 
@@ -106,8 +112,14 @@ public class VehicleController : ControllerBase
     {
         _logger.LogInformation("getVehicle funktion ramt");
 
+        var vehicle = _vehicleRepository.GetVehicleById(id);
+
+
+
+        /*
         Vehicle vehicle = new Vehicle(); //initialiserer nyt vehicle objekt
         vehicle = Vehicles.FirstOrDefault(a => a.VehicleId == id)!; //sætter vehicle til matchende id
+        */
 
         _logger.LogInformation("ønsket vehicle object sat til vehicle objekt med id");
 
@@ -118,19 +130,21 @@ public class VehicleController : ControllerBase
 
     [Authorize]
     [HttpPost("servicehistory/{id}"), DisableRequestSizeLimit]
-    public async Task<IActionResult> Post([FromBody] Service? serviceHistory, int id)
+    public async Task<IActionResult> AddService([FromBody] Service? service, int id)
     {
         _logger.LogInformation("Tilføj service historik til specifikt køretøj");
 
-        var vehicle = Vehicles.FirstOrDefault(a => a.VehicleId == id);
+        Vehicle serviceVehicle = await _vehicleRepository.GetVehicleById(id);
+
+
 
         var newServiceHistory = new Service //Opretter specifik service historik til gældende køretøj
         {
 
-            ServiceReferenceId = serviceHistory.ServiceReferenceId,
-            ServiceDate = serviceHistory.ServiceDate,
-            ServiceDescription = serviceHistory.ServiceDescription,
-            ServiceWorkerName = serviceHistory.ServiceWorkerName
+            ServiceReferenceId = service.ServiceReferenceId,
+            ServiceDate = service.ServiceDate,
+            ServiceDescription = service.ServiceDescription,
+            ServiceWorkerName = service.ServiceWorkerName
 
         };
 
@@ -143,12 +157,12 @@ public class VehicleController : ControllerBase
         else
         {
             //ServiceHistory.Add(newServiceHistory);
-            vehicle.ServiceHistory.Add(newServiceHistory);
+            serviceVehicle.ServiceHistory.Add(newServiceHistory);
         }
 
         _logger.LogInformation("Ny service historik tilføjet.");
 
-        return Ok(serviceHistory);
+        return Ok(serviceVehicle);
 
     }
 
